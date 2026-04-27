@@ -67,7 +67,7 @@ jobs:
           MYSQL_USER: root
           MYSQL_PASSWORD: admin
           MYSQL_DB: sakila
-        run: pytest tests/ -v
+        run: python -m pytest tests/ -v
 
   build:
     name: Build & Verify Image
