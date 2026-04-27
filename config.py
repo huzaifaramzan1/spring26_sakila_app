@@ -4,6 +4,8 @@
 
 import os
 """Database and healthcheck configuration for Sakila."""
+
+
 class Config:
     """Base configuration class for the Sakila Flask application.
     Handles database connection strings and system timeouts.
