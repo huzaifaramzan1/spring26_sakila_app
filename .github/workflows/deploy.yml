@@ -35,7 +35,8 @@ jobs:
           echo "### :rocket: Staging Deployment Complete" >> $GITHUB_STEP_SUMMARY
           echo "The staging environment has been successfully updated." >> $GITHUB_STEP_SUMMARY
       - name: Send Notification
-        run: echo "Slack notification: Deployment to staging successful"
+        run: |
+          echo "Slack notification: Deployment to staging successful"
 
   deploy-production:
     name: Deploy to Production
@@ -58,4 +59,5 @@ jobs:
           name: Release ${{ env.VERSION_TAG }}
           body: "Automated production deployment triggered by pipeline."
       - name: Send Notification
-        run: echo "Slack notification: Deployment to production successful"
+        run: |
+          echo "Slack notification: Deployment to production successful"
